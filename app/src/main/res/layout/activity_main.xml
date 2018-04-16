@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#1e1e1e"
+    tools:context="com.example.hmidemo.MainActivity">
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    >
+   <LinearLayout
+       android:layout_weight="1"
+       android:layout_width="0dp"
+       android:layout_height="match_parent"
+       android:orientation="vertical">
+       <ImageView
+           android:layout_marginTop="8sp"
+           android:layout_gravity="center"
+           android:src="@drawable/newxiaohui"
+           android:layout_width="wrap_content"
+           android:layout_height="45sp"
+           />
+       <Button
+           android:background="#828282"
+           android:layout_marginTop="5sp"
+           android:id="@+id/bt_home"
+           android:layout_width="match_parent"
+           android:layout_height="40sp"
+           android:text="主  页"
+           android:textSize="20sp"
+           />
+       <Button
+           android:layout_marginTop="5sp"
+           android:background="#828282"
+           android:id="@+id/bt_car"
+           android:layout_width="match_parent"
+           android:layout_height="40sp"
+           android:text="车  辆"
+           android:textSize="20sp"/>
+       <Button
+           android:layout_marginTop="5sp"
+           android:background="#828282"
+           android:id="@+id/bt_platoon"
+           android:layout_width="match_parent"
+           android:layout_height="40sp"
+           android:text="编  队"
+           android:textSize="20sp"/>
+       <Button
+           android:layout_marginTop="5sp"
+           android:background="#828282"
+           android:id="@+id/bt_location"
+           android:layout_width="match_parent"
+           android:layout_height="40sp"
+           android:text="位  置"
+           android:textSize="20sp"/>
+       <Button
+           android:layout_marginTop="5sp"
+           android:background="#828282"
+           android:id="@+id/bt_link"
+           android:layout_width="match_parent"
+           android:layout_height="40sp"
+           android:text="连  接"
+           android:textSize="20sp"/>
+       <Button
+           android:layout_marginTop="5sp"
+           android:background="#828282"
+           android:id="@+id/bt_setting"
+           android:layout_width="match_parent"
+           android:layout_height="40sp"
+           android:text="设  置"
+           android:textSize="20sp"
+           />
+
+       <TextView
+           android:textColor="#D3D3D3"
+           android:id="@+id/consho"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:text="未连接至"
+           android:layout_marginTop="10dp"
+           android:layout_gravity="center"
+           android:textSize="16sp" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+               <TextView
+                   android:textColor="#D3D3D3"
+                   android:layout_marginLeft="15sp"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:text="IP:"
+                   android:textSize="16sp"/>
+            <EditText
+                android:textColor="#D3D3D3"
+                android:id="@+id/edit_IP"
+                android:background="@null"
+                android:focusable="false"
+                android:inputType="number"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+           </LinearLayout>
+        <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:orientation="horizontal">
+       <TextView
+           android:textColor="#D3D3D3"
+           android:layout_marginLeft="5sp"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:text="PORT:"
+           android:textSize="16sp"/>
+           <EditText
+               android:textColor="#D3D3D3"
+               android:id="@+id/edit_PORT"
+               android:background="@null"
+               android:focusable="false"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"/>
+       </LinearLayout>
+       <TextView
+           android:textColor="#D3D3D3"
+           android:layout_gravity="center"
+           android:text="连接时长"
+           android:textSize="16sp"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content" />
+       <Chronometer
+           android:id="@+id/Timer"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_gravity="center_horizontal"
+           android:format="00:00:00"
+           android:textColor="#CCCCCC"
+           android:textSize="20sp" />
+
+   </LinearLayout>
+
+    <LinearLayout
+        android:layout_marginTop="20sp"
+        android:layout_marginLeft="10sp"
+        android:layout_weight="6"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+            <include   layout="@layout/weather_message"/>
+
+        <LinearLayout
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:orientation="horizontal">
+
+            <FrameLayout
+                android:id="@+id/upsideL"
+                android:layout_weight="3"
+                android:layout_width="0dp"
+                android:layout_height="match_parent">
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/upsideR"
+                android:layout_weight="2"
+                android:layout_width="0dp"
+                android:layout_height="match_parent">
+
+            </FrameLayout>
+
+    </LinearLayout>
+
+            <FrameLayout
+                android:layout_weight="1"
+                android:id="@+id/downside"
+                android:layout_width="match_parent"
+                android:layout_height="0dp">
+
+            </FrameLayout>
+
+    </LinearLayout>
+</LinearLayout>
+
+</android.support.constraint.ConstraintLayout>

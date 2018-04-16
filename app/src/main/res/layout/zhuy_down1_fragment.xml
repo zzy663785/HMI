@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    android:layout_marginTop="20sp"
+    android:layout_marginLeft="35sp">
+
+    <include layout="@layout/car_message"
+        android:layout_weight="3"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content" />
+
+
+        <LinearLayout
+            android:layout_marginTop="5sp"
+            android:layout_marginLeft="2sp"
+            android:layout_width="0dp"
+            android:layout_height="178dp"
+            android:layout_weight="1.8"
+            android:orientation="vertical">
+
+            <!--android:text=":( 未连接至服务器"-->
+
+            <TextView
+                android:text="编队尚未启动"
+                android:layout_gravity="center_horizontal"
+                android:textColor="#D3D3D3"
+                android:id="@+id/carchange"
+                android:textSize="25sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <com.facebook.shimmer.ShimmerFrameLayout
+            android:id="@+id/shimmerContent"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+
+                <ImageView
+                    android:layout_gravity="center"
+                    android:src="@drawable/readygo3"
+                    android:id="@+id/changeLaneView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+            </com.facebook.shimmer.ShimmerFrameLayout>
+
+        </LinearLayout>
+
+</LinearLayout>

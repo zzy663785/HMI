@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">HMIdemo</string>
+
+    <!--下面的两个按钮原本是打算用在Dialog的，这两个用于设置其自带的按钮-->
+    <string name="postive_button">确定</string>
+    <string name="negative_button">取消</string>
+
+</resources>
